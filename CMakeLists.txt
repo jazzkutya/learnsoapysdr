@@ -27,5 +27,7 @@ ADD_DEFINITIONS(
 )
 
 add_executable(soppy soppy.c)
+add_executable(soppy++ soppy++.cpp)
 set_source_files_properties(soppy.c PROPERTIES LANGUAGE CXX)
 target_link_libraries(soppy ${OTHER_LIBRARIES})
+target_link_libraries(soppy++ ${OTHER_LIBRARIES})
