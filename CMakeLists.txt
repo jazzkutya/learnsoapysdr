@@ -3,7 +3,7 @@
 ########################################################################
 
 cmake_minimum_required(VERSION 2.8.7)
-project(learnsoapy C)
+project(learnsoapy C CXX)
 
 macro(use_c99)
     if (CMAKE_VERSION VERSION_LESS "3.1")
@@ -27,4 +27,5 @@ ADD_DEFINITIONS(
 )
 
 add_executable(soppy soppy.c)
+set_source_files_properties(soppy.c PROPERTIES LANGUAGE CXX)
 target_link_libraries(soppy ${OTHER_LIBRARIES})
